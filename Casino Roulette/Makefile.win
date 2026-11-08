@@ -1,0 +1,28 @@
+# Project: Casino Roulette - By Andrade, Brady, Galorio
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = "Casino\ Roulette\ -\ By\ Andrade,\ Brady,\ Galorio.o"
+LINKOBJ  = "Casino Roulette - By Andrade, Brady, Galorio.o"
+LIBS     = -L"E:/Compiler/Dev-Cpp/MinGW64/lib" -L"E:/Compiler/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"E:/Compiler/Dev-Cpp/MinGW64/include" -I"E:/Compiler/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Compiler/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"E:/Compiler/Dev-Cpp/MinGW64/include" -I"E:/Compiler/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Compiler/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"E:/Compiler/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "Casino Roulette - By Andrade, Brady, Galorio.exe"
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+"Casino\ Roulette\ -\ By\ Andrade,\ Brady,\ Galorio.o": Casino\ Roulette\ -\ By\ Andrade,\ Brady,\ Galorio.cpp
+	$(CPP) -c "Casino Roulette - By Andrade, Brady, Galorio.cpp" -o "Casino Roulette - By Andrade, Brady, Galorio.o" $(CXXFLAGS)
